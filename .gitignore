@@ -1,0 +1,28 @@
+# Credentials and private job-seeking data
+.env
+.env.*
+!.env.example
+private/
+data/
+reports/
+artifacts/
+resumes/
+screenshots/
+browser-profile/
+*secret*
+*api-key*
+*.pem
+*.key
+*.dpapi
+*.sqlite3
+*.sqlite3-*
+*.log
+*.docx
+*.pdf
+
+# Local development
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage

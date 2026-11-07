@@ -1,0 +1,6 @@
+{
+  "mode": "dry_run",
+  "daily_new_jobs": 120,
+  "daily_resume_sends": 120,
+  "enabled_adapters": []
+}

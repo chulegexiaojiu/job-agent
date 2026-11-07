@@ -1,0 +1,6 @@
+-r requirements-probe.txt
+Pillow>=11.2.1,<13
+pydantic>=2.7,<3
+python-docx>=1.1,<2
+pypdf>=5,<7
+pywinauto>=0.6.9,<0.7; sys_platform == 'win32'

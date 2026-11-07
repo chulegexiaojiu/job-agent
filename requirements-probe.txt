@@ -1,0 +1,2 @@
+# Only used to draw a synthetic screenshot for the vision probe.
+Pillow>=10.1,<13

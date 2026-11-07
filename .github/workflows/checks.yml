@@ -1,0 +1,35 @@
+name: Offline checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    env:
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Compile
+        run: python -m compileall -q job_agent tools tests
+      - name: Offline regression tests
+        run: python -W error::ResourceWarning -m unittest discover -s tests -v
+      - name: Check public Git index
+        run: python -m tools.check_release

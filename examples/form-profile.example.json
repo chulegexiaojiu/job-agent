@@ -1,0 +1,20 @@
+{
+  "id": "example-single-page",
+  "url": "https://careers.example.test/apply/ai-intern",
+  "company": "示例测试公司",
+  "title": "AI应用实习生",
+  "reviewed": false,
+  "identity_source_url": "https://company.example.test/careers",
+  "identity_evidence_quote": "示例占位文字，须替换为已读取研究页面中支持公司与招聘链接关联的原文。",
+  "company_selector": {"id": "company"},
+  "title_selector": {"id": "title"},
+  "fields": {
+    "name": {"type": "Edit", "id": "name"},
+    "email": {"type": "Edit", "id": "email"}
+  },
+  "upload_selector": {"type": "Button", "id": "resume"},
+  "attachment_selector": {"id": "attachment"},
+  "submit_selector": {"type": "Button", "id": "submit"},
+  "receipt_selector": {"id": "receipt"},
+  "receipt_prefix": "申请成功，编号："
+}
